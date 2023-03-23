@@ -1,7 +1,7 @@
 public class Slide55 {
     static int a[];
     static int n=0,x=0;
-    
+
     public static void main(String[] args) {
         int j=0;
         a=new int[41];

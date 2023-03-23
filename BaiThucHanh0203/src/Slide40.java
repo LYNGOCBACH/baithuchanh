@@ -1,8 +1,9 @@
-import java.util.Scanner;public class slide40 {
+import java.util.Scanner;
+public class Slide40 {
     public static void main(String[] args) {
         int so;
         Scanner sc = new Scanner(System.in);
-        System.out.println("nhap vao gia tri so nguyen");
+        System.out.println("nhap vao gia tri so nguyen: ");
         so = sc.nextInt();
         switch(so)
         {
