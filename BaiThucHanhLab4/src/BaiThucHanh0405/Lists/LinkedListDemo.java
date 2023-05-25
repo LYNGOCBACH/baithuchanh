@@ -6,46 +6,31 @@ import java.util.Scanner;
 
 public class LinkedListDemo {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        LinkedList<Student> stdList = new LinkedList<Student>();
-        int choice;
-
-        do {
-            System.out.println("\n");
-            System.out.println("1. Nhap thong tin cho sinh vien");
-            System.out.println("2. Hien thi thong tin cho sinh vien");
-            System.out.println("3. Them moi thong tin cho sinh vien");
-            System.out.println("4. Sua thong tin cho sinh vien");
-            System.out.println("5. Xoa thong tin cua sinh vien ");
-            System.out.println("6. Exit");
-
-            System.out.print("Hay chon: ");
-            choice = sc.nextInt();
-
-            switch (choice) {
-                case 1:
-                    Student.inputInfo(stdList);
-                    break;
-                case 2:
-                    Student.displayInfo(stdList);
-                    break;
-                case 3:
-                    Student.addNewInfo(stdList);
-                    break;
-                case 4:
-                    Student.editInfo(stdList);
-                    break;
-                case 5:
-                    Student.deleteInfo(stdList);
-                    break;
-                case 6:
-                    System.out.println(" ");
-                default:
-                    System.out.println("Lua chon khong hop le vui long chon lai");
-                    break;
-            }
-
-        } while (choice != 6);
+         LinkedList<Student> LikedList = new LinkedList<>();
+         Scanner sc = new Scanner(System.in);
+         int b = 0;
+         Student.nhapthongtin(LikedList, b);
+         Student.hienthithongtin(LikedList);
+         System.out.println("1. hien thi thong tin sinh vien");
+         System.out.println("2. sua thong tin sinh vien");
+         System.out.println("3. xoa thong tin sinh vien");
+         System.out.println("vui long lua chon chuc nang");
+         int n = sc.nextInt();
+         switch(n){
+             case 1:
+                 Student.hienthithongtin(LikedList);
+                 break;
+             case 2:
+                 Student.suathongtin(LikedList);
+                 Student.hienthithongtin(LikedList);
+                 break;
+             case 3:
+                 Student.xoathongtin(LikedList);
+                 Student.hienthithongtin(LikedList);
+                 break;
+             default: System.out.println("lua chon khong họp le");
+         }
 
     }
+    
 }
